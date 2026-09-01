@@ -5,7 +5,7 @@ function chkVersion () {
 
     let options = {
         host: "raw.githubusercontent.com",
-        path: encodeURI("/pagadbner/M-SUCA-/master/package.json")
+        path: encodeURI("pagadbner/M-SUCA-/master/package.json")
     }
 
     gety(options, (data) => {
