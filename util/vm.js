@@ -32,8 +32,15 @@ function chkVersion () {
                 rse += chunk;
             });
             res.on("end", function() {
-                rse = JSON.parse(rse);
-                return callback(rse);
+                try {
+                    // Solo intenta parsear si la respuesta es un JSON válido
+                    rse = JSON.parse(rse);
+                    return callback(rse);
+                } catch (e) {
+                    // Si recibe un 404 o texto plano, se captura el error sin tumbar el bot
+                    console.log("[Support] No se pudo obtener la versión (Respuesta no válida del servidor).");
+                    return callback(null);
+                }
             });
         }).on("error", function(e) {
             return callback(null);
