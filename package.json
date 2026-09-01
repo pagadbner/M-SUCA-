@@ -1,0 +1,28 @@
+{
+  "name": "m-sica",
+  "displayName": "M-Sica Preview",
+  "version": "2.3.3",
+  "description": "심플한 한국어 기반 디스코드 뮤직 봇",
+  "main": "index.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "author": "RX8",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emin-G/M-Sica-music-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/Emin-G/M-Sica-music-bot/issues"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.14.0",
+    "@distube/ytdl-core": "^4.16.4",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3",
+    "tweetnacl": "^1.0.3",
+    "ytpl": "^2.3.0"
+  }
+}
